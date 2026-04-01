@@ -10,6 +10,9 @@ class settings(BaseSettings):
     FILE_MAX_SIZE_MB: int
     FILE_DEFULT_CHUNK_SIZE: int
 
+    MONOGODB_URI :str
+    MONGODB_DB_NAME :str
+
     class Config:                     # nested class to specify configuration for the settings
         env_file = ".env"
 
