@@ -22,3 +22,14 @@ class DataChunk(BaseModel):
         allow_population_by_field_name = True  # allow using field names instead of aliases when creating instances
         arbitrary_types_allowed = True  # allow arbitrary types like ObjectId
         # json_encoders = {ObjectId: str}  # convert ObjectId to string when serializing to JSON
+
+
+    @classmethod
+    def get_indexes(cls):
+        return [
+            {
+                "key":[("chunk_project_id", 1)],
+                "name":"chunk_project_id_index_1",
+                "unique": False
+            }
+        ]
