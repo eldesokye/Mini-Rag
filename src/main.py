@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from routes import base_router , data_router
 
 from motor.motor_asyncio import AsyncIOMotorClient
-from helpers.config import Settings,get_settings
+from helpers.config import get_settings
 
 
 app = FastAPI(title="Mini-Rag", version="0.1.0", description="A simple RAG (Retrieval-Augmented Generation) application built with FastAPI.")
