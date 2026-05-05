@@ -5,7 +5,7 @@ from typing import Optional
 # This model will be used to receive the parameters for processing a file, including the file ID, chunk size, chunk overlap,
 #  and whether to reset the processing state. The chunk size and overlap have default values if not provided in the request.
 class ProcessRequest(BaseModel):
-    file_id: str
+    file_id: str =  None
     chunk_size: Optional[int] = 100 # default to 1MB if not provided 
     chunk_overlap: Optional[int] = 20 # default to 20% overlap if not provided
     do_reset: Optional[int] = 0

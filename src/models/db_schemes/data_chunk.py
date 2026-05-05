@@ -9,7 +9,7 @@ class DataChunk(BaseModel):
     chunk_metadata: dict = Field(default_factory=dict)  # metadata associated with the chunk, stored as a dictionary
     chunk_order : int = Field(..., gt=0)  # the order of the chunk in the original file, must be a non-negative integer
     chunk_project_id : ObjectId = Field(..., alias="project_id")  # reference to the project this chunk belongs to, stored as an ObjectId
-
+    chunk_asset_id : ObjectId
 
     # @validator('chunk_text')
     # def validate_chunk_text(cls, value):
